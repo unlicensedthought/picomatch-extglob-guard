@@ -1,0 +1,2935 @@
+{
+ "upstream": "4.0.7",
+ "cases": [
+  {
+   "p": "**/*.{test,spec}.?(c|m)[jt]s?(x)",
+   "o": {},
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)(?!\\.)(?=.)[^/]*?\\.(test|spec)\\.(?:c|m)?(?:\\[jt\\]|[jt])s(?:x)?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/*.{test,spec}.?(c|m)[jt]s?(x)",
+    "start": 0,
+    "base": "",
+    "glob": "**/*.{test,spec}.?(c|m)[jt]s?(x)",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/a.spec.mjs",
+    "src/a.test.cjs",
+    "b.spec.tsx",
+    "api/test/health.test.ts"
+   ]
+  },
+  {
+   "p": "**/*.{test,spec}-d.?(c|m)[jt]s?(x)",
+   "o": {},
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)(?!\\.)(?=.)[^/]*?\\.(test|spec)-d\\.(?:c|m)?(?:\\[jt\\]|[jt])s(?:x)?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/*.{test,spec}-d.?(c|m)[jt]s?(x)",
+    "start": 0,
+    "base": "",
+    "glob": "**/*.{test,spec}-d.?(c|m)[jt]s?(x)",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/b.test-d.ts"
+   ]
+  },
+  {
+   "p": "**/node_modules/**",
+   "o": {},
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)node_modules(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$",
+   "scan": {
+    "prefix": "",
+    "input": "**/node_modules/**",
+    "start": 0,
+    "base": "",
+    "glob": "**/node_modules/**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "node_modules/x/index.js",
+    "a/node_modules/b.js"
+   ]
+  },
+  {
+   "p": "**/dist/**",
+   "o": {},
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)dist(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$",
+   "scan": {
+    "prefix": "",
+    "input": "**/dist/**",
+    "start": 0,
+    "base": "",
+    "glob": "**/dist/**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "dist/x.js",
+    "x/dist/y/z.js"
+   ]
+  },
+  {
+   "p": "**/*.ts",
+   "o": {},
+   "re": "^(?:(?:(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)?(?!\\.)(?=.)[^/]*?\\.ts\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/*.ts",
+    "start": 0,
+    "base": "",
+    "glob": "**/*.ts",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/b.test-d.ts",
+    "main.ts",
+    "x.d.ts",
+    "lib/x.d.ts",
+    "src/q/r.ts",
+    "api/test/health.test.ts"
+   ]
+  },
+  {
+   "p": "src/**/*.{js,ts}",
+   "o": {},
+   "re": "^(?:src(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.(js|ts))$",
+   "scan": {
+    "prefix": "",
+    "input": "src/**/*.{js,ts}",
+    "start": 0,
+    "base": "src",
+    "glob": "**/*.{js,ts}",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/b.test-d.ts",
+    "src/q/r.js",
+    "src/q/r.ts",
+    "src/x.js"
+   ]
+  },
+  {
+   "p": "**/!(*.d).ts",
+   "o": {},
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)(?:(?!(?:[^/]*?\\.d)\\.ts)[^/]*?)\\.ts)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/!(*.d).ts",
+    "start": 0,
+    "base": "",
+    "glob": "**/!(*.d).ts",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/b.test-d.ts",
+    "main.ts",
+    "src/q/r.ts",
+    "api/test/health.test.ts"
+   ]
+  },
+  {
+   "p": "@(a|b)/*.js",
+   "o": {},
+   "re": "^(?:(a|b)\\/(?!\\.)(?=.)[^/]*?\\.js)$",
+   "scan": {
+    "prefix": "",
+    "input": "@(a|b)/*.js",
+    "start": 0,
+    "base": "",
+    "glob": "@(a|b)/*.js",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": true,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a/x.js",
+    "b/y.js"
+   ]
+  },
+  {
+   "p": "!(foo).md",
+   "o": {},
+   "re": "^(?:(?=.)(?:(?!(?:foo))[^/]*?)\\.md)$",
+   "scan": {
+    "prefix": "",
+    "input": "!(foo).md",
+    "start": 0,
+    "base": "",
+    "glob": "!(foo).md",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": true,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": true
+   },
+   "hits": [
+    "bar.md"
+   ]
+  },
+  {
+   "p": "foo/**",
+   "o": {},
+   "re": "^(?:foo(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$",
+   "scan": {
+    "prefix": "",
+    "input": "foo/**",
+    "start": 0,
+    "base": "foo",
+    "glob": "**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "foo/bar/baz"
+   ]
+  },
+  {
+   "p": "*.md",
+   "o": {},
+   "re": "^(?:(?!\\.)(?=.)[^/]*?\\.md\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "*.md",
+    "start": 0,
+    "base": "",
+    "glob": "*.md",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "foo.md",
+    "bar.md"
+   ]
+  },
+  {
+   "p": "**/.*",
+   "o": {},
+   "re": "^(?:(?:(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)?\\.(?=.)[^/]*?\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/.*",
+    "start": 0,
+    "base": "",
+    "glob": "**/.*",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    ".env",
+    "x/.hidden"
+   ]
+  },
+  {
+   "p": "[abc].txt",
+   "o": {},
+   "re": "^(?:(?:\\[abc\\]|[abc])\\.txt)$",
+   "scan": {
+    "prefix": "",
+    "input": "[abc].txt",
+    "start": 0,
+    "base": "",
+    "glob": "[abc].txt",
+    "isBrace": false,
+    "isBracket": true,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a.txt"
+   ]
+  },
+  {
+   "p": "a/{b,c}/d",
+   "o": {},
+   "re": "^(?:a\\/(b|c)\\/d)$",
+   "scan": {
+    "prefix": "",
+    "input": "a/{b,c}/d",
+    "start": 0,
+    "base": "a",
+    "glob": "{b,c}/d",
+    "isBrace": true,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a/b/d",
+    "a/c/d"
+   ]
+  },
+  {
+   "p": "**/__tests__/**",
+   "o": {},
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)__tests__(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$",
+   "scan": {
+    "prefix": "",
+    "input": "**/__tests__/**",
+    "start": 0,
+    "base": "",
+    "glob": "**/__tests__/**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "pkg/__tests__/t.js"
+   ]
+  },
+  {
+   "p": "api/test/**/*.test.ts",
+   "o": {},
+   "re": "^(?:api\\/test(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.test\\.ts)$",
+   "scan": {
+    "prefix": "",
+    "input": "api/test/**/*.test.ts",
+    "start": 0,
+    "base": "api/test",
+    "glob": "**/*.test.ts",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "api/test/health.test.ts"
+   ]
+  },
+  {
+   "p": "**/*.d.ts",
+   "o": {},
+   "re": "^(?:(?:(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)?(?!\\.)(?=.)[^/]*?\\.d\\.ts\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/*.d.ts",
+    "start": 0,
+    "base": "",
+    "glob": "**/*.d.ts",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "x.d.ts",
+    "lib/x.d.ts"
+   ]
+  },
+  {
+   "p": "!**/node_modules/**",
+   "o": {},
+   "re": "^(?!^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)node_modules(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$).*$",
+   "scan": {
+    "prefix": "!",
+    "input": "!**/node_modules/**",
+    "start": 1,
+    "base": "",
+    "glob": "**/node_modules/**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": true,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/a.spec.mjs",
+    "src/a.test.cjs",
+    "src/b.test-d.ts",
+    "b.spec.tsx",
+    "dist/x.js",
+    "x/dist/y/z.js",
+    "main.ts",
+    "x.d.ts",
+    "lib/x.d.ts",
+    "src/q/r.js",
+    "src/q/r.ts",
+    "a/x.js",
+    "b/y.js",
+    "c/z.js",
+    "foo.md",
+    "bar.md",
+    "foo/bar/baz",
+    ".env",
+    "x/.hidden",
+    "a.txt",
+    "d.txt",
+    "a/b/d",
+    "a/c/d",
+    "a/e/d",
+    "pkg/__tests__/t.js",
+    "api/test/health.test.ts",
+    "src/x.mjs",
+    "src/x.js",
+    "src/x.cjs",
+    "coverage/lcov.info",
+    ".git/HEAD",
+    "a/x/y/b/c.json",
+    "a/b/c.json",
+    "q.js",
+    "qq.js",
+    "a*b",
+    "axb",
+    "a/b/c.js"
+   ]
+  },
+  {
+   "p": "src/*.?(m)js",
+   "o": {},
+   "re": "^(?:src\\/(?!\\.)(?=.)[^/]*?\\.(?:m)?js)$",
+   "scan": {
+    "prefix": "",
+    "input": "src/*.?(m)js",
+    "start": 0,
+    "base": "src",
+    "glob": "*.?(m)js",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.spec.mjs",
+    "src/x.mjs",
+    "src/x.js"
+   ]
+  },
+  {
+   "p": "**/{coverage,.git}/**",
+   "o": {},
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)(coverage|\\.git)(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$",
+   "scan": {
+    "prefix": "",
+    "input": "**/{coverage,.git}/**",
+    "start": 0,
+    "base": "",
+    "glob": "**/{coverage,.git}/**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "coverage/lcov.info",
+    ".git/HEAD"
+   ]
+  },
+  {
+   "p": "a/**/b/*.json",
+   "o": {},
+   "re": "^(?:a(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)b\\/(?!\\.)(?=.)[^/]*?\\.json)$",
+   "scan": {
+    "prefix": "",
+    "input": "a/**/b/*.json",
+    "start": 0,
+    "base": "a",
+    "glob": "**/b/*.json",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a/x/y/b/c.json",
+    "a/b/c.json"
+   ]
+  },
+  {
+   "p": "?.js",
+   "o": {},
+   "re": "^(?:^(?:[^.\\/]\\.js)$)$",
+   "scan": {
+    "prefix": "",
+    "input": "?.js",
+    "start": 0,
+    "base": "",
+    "glob": "?.js",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "q.js"
+   ]
+  },
+  {
+   "p": "**",
+   "o": {},
+   "re": "^(?:(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**",
+    "start": 0,
+    "base": "",
+    "glob": "**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/a.spec.mjs",
+    "src/a.test.cjs",
+    "src/b.test-d.ts",
+    "b.spec.tsx",
+    "node_modules/x/index.js",
+    "a/node_modules/b.js",
+    "dist/x.js",
+    "x/dist/y/z.js",
+    "main.ts",
+    "x.d.ts",
+    "lib/x.d.ts",
+    "src/q/r.js",
+    "src/q/r.ts",
+    "a/x.js",
+    "b/y.js",
+    "c/z.js",
+    "foo.md",
+    "bar.md",
+    "foo/bar/baz",
+    "a.txt",
+    "d.txt",
+    "a/b/d",
+    "a/c/d",
+    "a/e/d",
+    "pkg/__tests__/t.js",
+    "api/test/health.test.ts",
+    "src/x.mjs",
+    "src/x.js",
+    "src/x.cjs",
+    "coverage/lcov.info",
+    "a/x/y/b/c.json",
+    "a/b/c.json",
+    "q.js",
+    "qq.js",
+    "a*b",
+    "axb",
+    "a/b/c.js"
+   ]
+  },
+  {
+   "p": "*",
+   "o": {},
+   "re": "^(?:(?!\\.)(?=.)[^/]*?\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "*",
+    "start": 0,
+    "base": "",
+    "glob": "*",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "b.spec.tsx",
+    "main.ts",
+    "x.d.ts",
+    "foo.md",
+    "bar.md",
+    "a.txt",
+    "d.txt",
+    "q.js",
+    "qq.js",
+    "a*b",
+    "axb"
+   ]
+  },
+  {
+   "p": "a\\*b",
+   "o": {},
+   "re": "^(?:^(?:a\\*b)$)$",
+   "scan": {
+    "prefix": "",
+    "input": "a\\*b",
+    "start": 0,
+    "base": "a\\*b",
+    "glob": "",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": false,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a*b"
+   ]
+  },
+  {
+   "p": "a/b/c.js",
+   "o": {},
+   "re": "^(?:a\\/b\\/c\\.js)$",
+   "scan": {
+    "prefix": "",
+    "input": "a/b/c.js",
+    "start": 0,
+    "base": "a/b/c.js",
+    "glob": "",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": false,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a/b/c.js"
+   ]
+  },
+  {
+   "p": "**/*.{test,spec}.?(c|m)[jt]s?(x)",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/)(?!\\.{1,2}(?:\\/|$))(?=.)[^/]*?\\.(test|spec)\\.(?:c|m)?(?:\\[jt\\]|[jt])s(?:x)?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/*.{test,spec}.?(c|m)[jt]s?(x)",
+    "start": 0,
+    "base": "",
+    "glob": "**/*.{test,spec}.?(c|m)[jt]s?(x)",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/a.spec.mjs",
+    "src/a.test.cjs",
+    "b.spec.tsx",
+    "api/test/health.test.ts"
+   ]
+  },
+  {
+   "p": "**/*.{test,spec}-d.?(c|m)[jt]s?(x)",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/)(?!\\.{1,2}(?:\\/|$))(?=.)[^/]*?\\.(test|spec)-d\\.(?:c|m)?(?:\\[jt\\]|[jt])s(?:x)?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/*.{test,spec}-d.?(c|m)[jt]s?(x)",
+    "start": 0,
+    "base": "",
+    "glob": "**/*.{test,spec}-d.?(c|m)[jt]s?(x)",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/b.test-d.ts"
+   ]
+  },
+  {
+   "p": "**/node_modules/**",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/)node_modules(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$",
+   "scan": {
+    "prefix": "",
+    "input": "**/node_modules/**",
+    "start": 0,
+    "base": "",
+    "glob": "**/node_modules/**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "node_modules/x/index.js",
+    "a/node_modules/b.js"
+   ]
+  },
+  {
+   "p": "**/dist/**",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/)dist(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$",
+   "scan": {
+    "prefix": "",
+    "input": "**/dist/**",
+    "start": 0,
+    "base": "",
+    "glob": "**/dist/**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "dist/x.js",
+    "x/dist/y/z.js"
+   ]
+  },
+  {
+   "p": "**/*.ts",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/)?(?!\\.{1,2}(?:\\/|$))(?=.)[^/]*?\\.ts\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/*.ts",
+    "start": 0,
+    "base": "",
+    "glob": "**/*.ts",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/b.test-d.ts",
+    "main.ts",
+    "x.d.ts",
+    "lib/x.d.ts",
+    "src/q/r.ts",
+    "api/test/health.test.ts"
+   ]
+  },
+  {
+   "p": "src/**/*.{js,ts}",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:src(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/|\\/|$)(?!\\.{1,2}(?:\\/|$))(?=.)[^/]*?\\.(js|ts))$",
+   "scan": {
+    "prefix": "",
+    "input": "src/**/*.{js,ts}",
+    "start": 0,
+    "base": "src",
+    "glob": "**/*.{js,ts}",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/b.test-d.ts",
+    "src/q/r.js",
+    "src/q/r.ts",
+    "src/x.js"
+   ]
+  },
+  {
+   "p": "**/!(*.d).ts",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/)(?:(?!(?:[^/]*?\\.d)\\.ts)[^/]*?)\\.ts)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/!(*.d).ts",
+    "start": 0,
+    "base": "",
+    "glob": "**/!(*.d).ts",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/b.test-d.ts",
+    "main.ts",
+    "src/q/r.ts",
+    "api/test/health.test.ts"
+   ]
+  },
+  {
+   "p": "@(a|b)/*.js",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:(a|b)\\/(?!\\.{1,2}(?:\\/|$))(?=.)[^/]*?\\.js)$",
+   "scan": {
+    "prefix": "",
+    "input": "@(a|b)/*.js",
+    "start": 0,
+    "base": "",
+    "glob": "@(a|b)/*.js",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": true,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a/x.js",
+    "b/y.js"
+   ]
+  },
+  {
+   "p": "!(foo).md",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:(?=.)(?:(?!(?:foo))[^/]*?)\\.md)$",
+   "scan": {
+    "prefix": "",
+    "input": "!(foo).md",
+    "start": 0,
+    "base": "",
+    "glob": "!(foo).md",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": true,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": true
+   },
+   "hits": [
+    "bar.md"
+   ]
+  },
+  {
+   "p": "foo/**",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:foo(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$",
+   "scan": {
+    "prefix": "",
+    "input": "foo/**",
+    "start": 0,
+    "base": "foo",
+    "glob": "**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "foo/bar/baz"
+   ]
+  },
+  {
+   "p": "*.md",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$))(?=.)[^/]*?\\.md\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "*.md",
+    "start": 0,
+    "base": "",
+    "glob": "*.md",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "foo.md",
+    "bar.md"
+   ]
+  },
+  {
+   "p": "**/.*",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/)?\\.(?=.)[^/]*?\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/.*",
+    "start": 0,
+    "base": "",
+    "glob": "**/.*",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    ".env",
+    "x/.hidden"
+   ]
+  },
+  {
+   "p": "[abc].txt",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:(?:\\[abc\\]|[abc])\\.txt)$",
+   "scan": {
+    "prefix": "",
+    "input": "[abc].txt",
+    "start": 0,
+    "base": "",
+    "glob": "[abc].txt",
+    "isBrace": false,
+    "isBracket": true,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a.txt"
+   ]
+  },
+  {
+   "p": "a/{b,c}/d",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:a\\/(b|c)\\/d)$",
+   "scan": {
+    "prefix": "",
+    "input": "a/{b,c}/d",
+    "start": 0,
+    "base": "a",
+    "glob": "{b,c}/d",
+    "isBrace": true,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a/b/d",
+    "a/c/d"
+   ]
+  },
+  {
+   "p": "**/__tests__/**",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/)__tests__(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$",
+   "scan": {
+    "prefix": "",
+    "input": "**/__tests__/**",
+    "start": 0,
+    "base": "",
+    "glob": "**/__tests__/**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "pkg/__tests__/t.js"
+   ]
+  },
+  {
+   "p": "api/test/**/*.test.ts",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:api\\/test(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/|\\/|$)(?!\\.{1,2}(?:\\/|$))(?=.)[^/]*?\\.test\\.ts)$",
+   "scan": {
+    "prefix": "",
+    "input": "api/test/**/*.test.ts",
+    "start": 0,
+    "base": "api/test",
+    "glob": "**/*.test.ts",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "api/test/health.test.ts"
+   ]
+  },
+  {
+   "p": "**/*.d.ts",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/)?(?!\\.{1,2}(?:\\/|$))(?=.)[^/]*?\\.d\\.ts\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/*.d.ts",
+    "start": 0,
+    "base": "",
+    "glob": "**/*.d.ts",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "x.d.ts",
+    "lib/x.d.ts"
+   ]
+  },
+  {
+   "p": "!**/node_modules/**",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?!^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/)node_modules(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$).*$",
+   "scan": {
+    "prefix": "!",
+    "input": "!**/node_modules/**",
+    "start": 1,
+    "base": "",
+    "glob": "**/node_modules/**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": true,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/a.spec.mjs",
+    "src/a.test.cjs",
+    "src/b.test-d.ts",
+    "b.spec.tsx",
+    "dist/x.js",
+    "x/dist/y/z.js",
+    "main.ts",
+    "x.d.ts",
+    "lib/x.d.ts",
+    "src/q/r.js",
+    "src/q/r.ts",
+    "a/x.js",
+    "b/y.js",
+    "c/z.js",
+    "foo.md",
+    "bar.md",
+    "foo/bar/baz",
+    ".env",
+    "x/.hidden",
+    "a.txt",
+    "d.txt",
+    "a/b/d",
+    "a/c/d",
+    "a/e/d",
+    "pkg/__tests__/t.js",
+    "api/test/health.test.ts",
+    "src/x.mjs",
+    "src/x.js",
+    "src/x.cjs",
+    "coverage/lcov.info",
+    ".git/HEAD",
+    "a/x/y/b/c.json",
+    "a/b/c.json",
+    "q.js",
+    "qq.js",
+    "a*b",
+    "axb",
+    "a/b/c.js"
+   ]
+  },
+  {
+   "p": "src/*.?(m)js",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:src\\/(?!\\.{1,2}(?:\\/|$))(?=.)[^/]*?\\.(?:m)?js)$",
+   "scan": {
+    "prefix": "",
+    "input": "src/*.?(m)js",
+    "start": 0,
+    "base": "src",
+    "glob": "*.?(m)js",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.spec.mjs",
+    "src/x.mjs",
+    "src/x.js"
+   ]
+  },
+  {
+   "p": "**/{coverage,.git}/**",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/)(coverage|\\.git)(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$",
+   "scan": {
+    "prefix": "",
+    "input": "**/{coverage,.git}/**",
+    "start": 0,
+    "base": "",
+    "glob": "**/{coverage,.git}/**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "coverage/lcov.info",
+    ".git/HEAD"
+   ]
+  },
+  {
+   "p": "a/**/b/*.json",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:a(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/|\\/|$)b\\/(?!\\.{1,2}(?:\\/|$))(?=.)[^/]*?\\.json)$",
+   "scan": {
+    "prefix": "",
+    "input": "a/**/b/*.json",
+    "start": 0,
+    "base": "a",
+    "glob": "**/b/*.json",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a/x/y/b/c.json",
+    "a/b/c.json"
+   ]
+  },
+  {
+   "p": "?.js",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:^(?:[^/]\\.js)$)$",
+   "scan": {
+    "prefix": "",
+    "input": "?.js",
+    "start": 0,
+    "base": "",
+    "glob": "?.js",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "q.js"
+   ]
+  },
+  {
+   "p": "**",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**",
+    "start": 0,
+    "base": "",
+    "glob": "**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/a.spec.mjs",
+    "src/a.test.cjs",
+    "src/b.test-d.ts",
+    "b.spec.tsx",
+    "node_modules/x/index.js",
+    "a/node_modules/b.js",
+    "dist/x.js",
+    "x/dist/y/z.js",
+    "main.ts",
+    "x.d.ts",
+    "lib/x.d.ts",
+    "src/q/r.js",
+    "src/q/r.ts",
+    "a/x.js",
+    "b/y.js",
+    "c/z.js",
+    "foo.md",
+    "bar.md",
+    "foo/bar/baz",
+    ".env",
+    "x/.hidden",
+    "a.txt",
+    "d.txt",
+    "a/b/d",
+    "a/c/d",
+    "a/e/d",
+    "pkg/__tests__/t.js",
+    "api/test/health.test.ts",
+    "src/x.mjs",
+    "src/x.js",
+    "src/x.cjs",
+    "coverage/lcov.info",
+    ".git/HEAD",
+    "a/x/y/b/c.json",
+    "a/b/c.json",
+    "q.js",
+    "qq.js",
+    "a*b",
+    "axb",
+    "a/b/c.js"
+   ]
+  },
+  {
+   "p": "*",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$))(?=.)[^/]*?\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "*",
+    "start": 0,
+    "base": "",
+    "glob": "*",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "b.spec.tsx",
+    "main.ts",
+    "x.d.ts",
+    "foo.md",
+    "bar.md",
+    ".env",
+    "a.txt",
+    "d.txt",
+    "q.js",
+    "qq.js",
+    "a*b",
+    "axb"
+   ]
+  },
+  {
+   "p": "a\\*b",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:^(?:a\\*b)$)$",
+   "scan": {
+    "prefix": "",
+    "input": "a\\*b",
+    "start": 0,
+    "base": "a\\*b",
+    "glob": "",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": false,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a*b"
+   ]
+  },
+  {
+   "p": "a/b/c.js",
+   "o": {
+    "dot": true
+   },
+   "re": "^(?:a\\/b\\/c\\.js)$",
+   "scan": {
+    "prefix": "",
+    "input": "a/b/c.js",
+    "start": 0,
+    "base": "a/b/c.js",
+    "glob": "",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": false,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a/b/c.js"
+   ]
+  },
+  {
+   "p": "**/*.{test,spec}.?(c|m)[jt]s?(x)",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)(?!\\.)(?=.)[^/]*?\\.(test|spec)\\.(?:c|m)?(?:\\[jt\\]|[jt])s(?:x)?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/*.{test,spec}.?(c|m)[jt]s?(x)",
+    "start": 0,
+    "base": "",
+    "glob": "**/*.{test,spec}.?(c|m)[jt]s?(x)",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/a.spec.mjs",
+    "src/a.test.cjs",
+    "b.spec.tsx",
+    "api/test/health.test.ts"
+   ]
+  },
+  {
+   "p": "**/*.{test,spec}-d.?(c|m)[jt]s?(x)",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)(?!\\.)(?=.)[^/]*?\\.(test|spec)-d\\.(?:c|m)?(?:\\[jt\\]|[jt])s(?:x)?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/*.{test,spec}-d.?(c|m)[jt]s?(x)",
+    "start": 0,
+    "base": "",
+    "glob": "**/*.{test,spec}-d.?(c|m)[jt]s?(x)",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/b.test-d.ts"
+   ]
+  },
+  {
+   "p": "**/node_modules/**",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)node_modules(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$",
+   "scan": {
+    "prefix": "",
+    "input": "**/node_modules/**",
+    "start": 0,
+    "base": "",
+    "glob": "**/node_modules/**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "node_modules/x/index.js",
+    "a/node_modules/b.js"
+   ]
+  },
+  {
+   "p": "**/dist/**",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)dist(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$",
+   "scan": {
+    "prefix": "",
+    "input": "**/dist/**",
+    "start": 0,
+    "base": "",
+    "glob": "**/dist/**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "dist/x.js",
+    "x/dist/y/z.js"
+   ]
+  },
+  {
+   "p": "**/*.ts",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:(?:(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)?(?!\\.)(?=.)[^/]*?\\.ts\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/*.ts",
+    "start": 0,
+    "base": "",
+    "glob": "**/*.ts",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/b.test-d.ts",
+    "main.ts",
+    "x.d.ts",
+    "lib/x.d.ts",
+    "src/q/r.ts",
+    "api/test/health.test.ts"
+   ]
+  },
+  {
+   "p": "src/**/*.{js,ts}",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:src(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.(js|ts))$",
+   "scan": {
+    "prefix": "",
+    "input": "src/**/*.{js,ts}",
+    "start": 0,
+    "base": "src",
+    "glob": "**/*.{js,ts}",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/b.test-d.ts",
+    "src/q/r.js",
+    "src/q/r.ts",
+    "src/x.js"
+   ]
+  },
+  {
+   "p": "**/!(*.d).ts",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)(?:(?!(?:[^/]*?\\.d)\\.ts)[^/]*?)\\.ts)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/!(*.d).ts",
+    "start": 0,
+    "base": "",
+    "glob": "**/!(*.d).ts",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/b.test-d.ts",
+    "main.ts",
+    "src/q/r.ts",
+    "api/test/health.test.ts"
+   ]
+  },
+  {
+   "p": "@(a|b)/*.js",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:(a|b)\\/(?!\\.)(?=.)[^/]*?\\.js)$",
+   "scan": {
+    "prefix": "",
+    "input": "@(a|b)/*.js",
+    "start": 0,
+    "base": "",
+    "glob": "@(a|b)/*.js",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": true,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a/x.js",
+    "b/y.js"
+   ]
+  },
+  {
+   "p": "!(foo).md",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:(?=.)(?:(?!(?:foo))[^/]*?)\\.md)$",
+   "scan": {
+    "prefix": "",
+    "input": "!(foo).md",
+    "start": 0,
+    "base": "",
+    "glob": "!(foo).md",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": true,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": true
+   },
+   "hits": [
+    "bar.md"
+   ]
+  },
+  {
+   "p": "foo/**",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:foo(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$",
+   "scan": {
+    "prefix": "",
+    "input": "foo/**",
+    "start": 0,
+    "base": "foo",
+    "glob": "**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "foo/bar/baz"
+   ]
+  },
+  {
+   "p": "*.md",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:(?!\\.)(?=.)[^/]*?\\.md\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "*.md",
+    "start": 0,
+    "base": "",
+    "glob": "*.md",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "foo.md",
+    "bar.md"
+   ]
+  },
+  {
+   "p": "**/.*",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:(?:(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)?\\.(?=.)[^/]*?\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/.*",
+    "start": 0,
+    "base": "",
+    "glob": "**/.*",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    ".env",
+    "x/.hidden"
+   ]
+  },
+  {
+   "p": "[abc].txt",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:(?:\\[abc\\]|[abc])\\.txt)$",
+   "scan": {
+    "prefix": "",
+    "input": "[abc].txt",
+    "start": 0,
+    "base": "",
+    "glob": "[abc].txt",
+    "isBrace": false,
+    "isBracket": true,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a.txt"
+   ]
+  },
+  {
+   "p": "a/{b,c}/d",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:a\\/(b|c)\\/d)$",
+   "scan": {
+    "prefix": "",
+    "input": "a/{b,c}/d",
+    "start": 0,
+    "base": "a",
+    "glob": "{b,c}/d",
+    "isBrace": true,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a/b/d",
+    "a/c/d"
+   ]
+  },
+  {
+   "p": "**/__tests__/**",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)__tests__(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$",
+   "scan": {
+    "prefix": "",
+    "input": "**/__tests__/**",
+    "start": 0,
+    "base": "",
+    "glob": "**/__tests__/**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "pkg/__tests__/t.js"
+   ]
+  },
+  {
+   "p": "api/test/**/*.test.ts",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:api\\/test(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.test\\.ts)$",
+   "scan": {
+    "prefix": "",
+    "input": "api/test/**/*.test.ts",
+    "start": 0,
+    "base": "api/test",
+    "glob": "**/*.test.ts",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "api/test/health.test.ts"
+   ]
+  },
+  {
+   "p": "**/*.d.ts",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:(?:(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)?(?!\\.)(?=.)[^/]*?\\.d\\.ts\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/*.d.ts",
+    "start": 0,
+    "base": "",
+    "glob": "**/*.d.ts",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "x.d.ts",
+    "lib/x.d.ts"
+   ]
+  },
+  {
+   "p": "!**/node_modules/**",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?!^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)node_modules(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$).*$",
+   "scan": {
+    "prefix": "!",
+    "input": "!**/node_modules/**",
+    "start": 1,
+    "base": "",
+    "glob": "**/node_modules/**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": true,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/a.spec.mjs",
+    "src/a.test.cjs",
+    "src/b.test-d.ts",
+    "b.spec.tsx",
+    "dist/x.js",
+    "x/dist/y/z.js",
+    "main.ts",
+    "x.d.ts",
+    "lib/x.d.ts",
+    "src/q/r.js",
+    "src/q/r.ts",
+    "a/x.js",
+    "b/y.js",
+    "c/z.js",
+    "foo.md",
+    "bar.md",
+    "foo/bar/baz",
+    ".env",
+    "x/.hidden",
+    "a.txt",
+    "d.txt",
+    "a/b/d",
+    "a/c/d",
+    "a/e/d",
+    "pkg/__tests__/t.js",
+    "api/test/health.test.ts",
+    "src/x.mjs",
+    "src/x.js",
+    "src/x.cjs",
+    "coverage/lcov.info",
+    ".git/HEAD",
+    "a/x/y/b/c.json",
+    "a/b/c.json",
+    "q.js",
+    "qq.js",
+    "a*b",
+    "axb",
+    "a/b/c.js"
+   ]
+  },
+  {
+   "p": "src/*.?(m)js",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:src\\/(?!\\.)(?=.)[^/]*?\\.(?:m)?js)$",
+   "scan": {
+    "prefix": "",
+    "input": "src/*.?(m)js",
+    "start": 0,
+    "base": "src",
+    "glob": "*.?(m)js",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.spec.mjs",
+    "src/x.mjs",
+    "src/x.js"
+   ]
+  },
+  {
+   "p": "**/{coverage,.git}/**",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)(coverage|\\.git)(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$",
+   "scan": {
+    "prefix": "",
+    "input": "**/{coverage,.git}/**",
+    "start": 0,
+    "base": "",
+    "glob": "**/{coverage,.git}/**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "coverage/lcov.info",
+    ".git/HEAD"
+   ]
+  },
+  {
+   "p": "a/**/b/*.json",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:a(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)b\\/(?!\\.)(?=.)[^/]*?\\.json)$",
+   "scan": {
+    "prefix": "",
+    "input": "a/**/b/*.json",
+    "start": 0,
+    "base": "a",
+    "glob": "**/b/*.json",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a/x/y/b/c.json",
+    "a/b/c.json"
+   ]
+  },
+  {
+   "p": "?.js",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:^(?:[^.\\/]\\.js)$)$",
+   "scan": {
+    "prefix": "",
+    "input": "?.js",
+    "start": 0,
+    "base": "",
+    "glob": "?.js",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "q.js"
+   ]
+  },
+  {
+   "p": "**",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**",
+    "start": 0,
+    "base": "",
+    "glob": "**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/a.spec.mjs",
+    "src/a.test.cjs",
+    "src/b.test-d.ts",
+    "b.spec.tsx",
+    "node_modules/x/index.js",
+    "a/node_modules/b.js",
+    "dist/x.js",
+    "x/dist/y/z.js",
+    "main.ts",
+    "x.d.ts",
+    "lib/x.d.ts",
+    "src/q/r.js",
+    "src/q/r.ts",
+    "a/x.js",
+    "b/y.js",
+    "c/z.js",
+    "foo.md",
+    "bar.md",
+    "foo/bar/baz",
+    "a.txt",
+    "d.txt",
+    "a/b/d",
+    "a/c/d",
+    "a/e/d",
+    "pkg/__tests__/t.js",
+    "api/test/health.test.ts",
+    "src/x.mjs",
+    "src/x.js",
+    "src/x.cjs",
+    "coverage/lcov.info",
+    "a/x/y/b/c.json",
+    "a/b/c.json",
+    "q.js",
+    "qq.js",
+    "a*b",
+    "axb",
+    "a/b/c.js"
+   ]
+  },
+  {
+   "p": "*",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:(?!\\.)(?=.)[^/]*?\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "*",
+    "start": 0,
+    "base": "",
+    "glob": "*",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "b.spec.tsx",
+    "main.ts",
+    "x.d.ts",
+    "foo.md",
+    "bar.md",
+    "a.txt",
+    "d.txt",
+    "q.js",
+    "qq.js",
+    "a*b",
+    "axb"
+   ]
+  },
+  {
+   "p": "a\\*b",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:^(?:a\\*b)$)$",
+   "scan": {
+    "prefix": "",
+    "input": "a\\*b",
+    "start": 0,
+    "base": "a\\*b",
+    "glob": "",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": false,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a*b"
+   ]
+  },
+  {
+   "p": "a/b/c.js",
+   "o": {
+    "nocase": true
+   },
+   "re": "^(?:a\\/b\\/c\\.js)$",
+   "scan": {
+    "prefix": "",
+    "input": "a/b/c.js",
+    "start": 0,
+    "base": "a/b/c.js",
+    "glob": "",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": false,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a/b/c.js"
+   ]
+  },
+  {
+   "p": "**/*.{test,spec}.?(c|m)[jt]s?(x)",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)(?!\\.)(?=.)[^/]*?\\.(test|spec)\\.(?:c|m)?(?:\\[jt\\]|[jt])s(?:x)?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/*.{test,spec}.?(c|m)[jt]s?(x)",
+    "start": 0,
+    "base": "",
+    "glob": "**/*.{test,spec}.?(c|m)[jt]s?(x)",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/a.spec.mjs",
+    "src/a.test.cjs",
+    "b.spec.tsx",
+    "api/test/health.test.ts"
+   ]
+  },
+  {
+   "p": "**/*.{test,spec}-d.?(c|m)[jt]s?(x)",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)(?!\\.)(?=.)[^/]*?\\.(test|spec)-d\\.(?:c|m)?(?:\\[jt\\]|[jt])s(?:x)?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/*.{test,spec}-d.?(c|m)[jt]s?(x)",
+    "start": 0,
+    "base": "",
+    "glob": "**/*.{test,spec}-d.?(c|m)[jt]s?(x)",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/b.test-d.ts"
+   ]
+  },
+  {
+   "p": "**/node_modules/**",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)node_modules(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$",
+   "scan": {
+    "prefix": "",
+    "input": "**/node_modules/**",
+    "start": 0,
+    "base": "",
+    "glob": "**/node_modules/**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "node_modules/x/index.js",
+    "a/node_modules/b.js"
+   ]
+  },
+  {
+   "p": "**/dist/**",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)dist(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$",
+   "scan": {
+    "prefix": "",
+    "input": "**/dist/**",
+    "start": 0,
+    "base": "",
+    "glob": "**/dist/**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "dist/x.js",
+    "x/dist/y/z.js"
+   ]
+  },
+  {
+   "p": "**/*.ts",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:(?:(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)?(?!\\.)(?=.)[^/]*?\\.ts\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/*.ts",
+    "start": 0,
+    "base": "",
+    "glob": "**/*.ts",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/b.test-d.ts",
+    "main.ts",
+    "x.d.ts",
+    "lib/x.d.ts",
+    "src/q/r.ts",
+    "api/test/health.test.ts"
+   ]
+  },
+  {
+   "p": "src/**/*.{js,ts}",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:src(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.(js|ts))$",
+   "scan": {
+    "prefix": "",
+    "input": "src/**/*.{js,ts}",
+    "start": 0,
+    "base": "src",
+    "glob": "**/*.{js,ts}",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/b.test-d.ts",
+    "src/q/r.js",
+    "src/q/r.ts",
+    "src/x.js"
+   ]
+  },
+  {
+   "p": "**/!(*.d).ts",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)(?:(?!(?:[^/]*?\\.d)\\.ts)[^/]*?)\\.ts)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/!(*.d).ts",
+    "start": 0,
+    "base": "",
+    "glob": "**/!(*.d).ts",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/b.test-d.ts",
+    "main.ts",
+    "src/q/r.ts",
+    "api/test/health.test.ts"
+   ]
+  },
+  {
+   "p": "@(a|b)/*.js",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:(a|b)\\/(?!\\.)(?=.)[^/]*?\\.js)$",
+   "scan": {
+    "prefix": "",
+    "input": "@(a|b)/*.js",
+    "start": 0,
+    "base": "",
+    "glob": "@(a|b)/*.js",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": true,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a/x.js",
+    "b/y.js"
+   ]
+  },
+  {
+   "p": "!(foo).md",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:(?=.)(?:(?!(?:foo))[^/]*?)\\.md)$",
+   "scan": {
+    "prefix": "",
+    "input": "!(foo).md",
+    "start": 0,
+    "base": "",
+    "glob": "!(foo).md",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": true,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": true
+   },
+   "hits": [
+    "bar.md"
+   ]
+  },
+  {
+   "p": "foo/**",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:foo(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$",
+   "scan": {
+    "prefix": "",
+    "input": "foo/**",
+    "start": 0,
+    "base": "foo",
+    "glob": "**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "foo/bar/baz"
+   ]
+  },
+  {
+   "p": "*.md",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:(?!\\.)(?=.)[^/]*?\\.md\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "*.md",
+    "start": 0,
+    "base": "",
+    "glob": "*.md",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "foo.md",
+    "bar.md"
+   ]
+  },
+  {
+   "p": "**/.*",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:(?:(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)?\\.(?=.)[^/]*?\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/.*",
+    "start": 0,
+    "base": "",
+    "glob": "**/.*",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    ".env",
+    "x/.hidden"
+   ]
+  },
+  {
+   "p": "[abc].txt",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:(?:\\[abc\\]|[abc])\\.txt)$",
+   "scan": {
+    "prefix": "",
+    "input": "[abc].txt",
+    "start": 0,
+    "base": "",
+    "glob": "[abc].txt",
+    "isBrace": false,
+    "isBracket": true,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a.txt"
+   ]
+  },
+  {
+   "p": "a/{b,c}/d",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:a\\/(b|c)\\/d)$",
+   "scan": {
+    "prefix": "",
+    "input": "a/{b,c}/d",
+    "start": 0,
+    "base": "a",
+    "glob": "{b,c}/d",
+    "isBrace": true,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a/b/d",
+    "a/c/d"
+   ]
+  },
+  {
+   "p": "**/__tests__/**",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)__tests__(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$",
+   "scan": {
+    "prefix": "",
+    "input": "**/__tests__/**",
+    "start": 0,
+    "base": "",
+    "glob": "**/__tests__/**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "pkg/__tests__/t.js"
+   ]
+  },
+  {
+   "p": "api/test/**/*.test.ts",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:api\\/test(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.test\\.ts)$",
+   "scan": {
+    "prefix": "",
+    "input": "api/test/**/*.test.ts",
+    "start": 0,
+    "base": "api/test",
+    "glob": "**/*.test.ts",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "api/test/health.test.ts"
+   ]
+  },
+  {
+   "p": "**/*.d.ts",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:(?:(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)?(?!\\.)(?=.)[^/]*?\\.d\\.ts\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**/*.d.ts",
+    "start": 0,
+    "base": "",
+    "glob": "**/*.d.ts",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "x.d.ts",
+    "lib/x.d.ts"
+   ]
+  },
+  {
+   "p": "!**/node_modules/**",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?!^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)node_modules(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$).*$",
+   "scan": {
+    "prefix": "!",
+    "input": "!**/node_modules/**",
+    "start": 1,
+    "base": "",
+    "glob": "**/node_modules/**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": true,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/a.spec.mjs",
+    "src/a.test.cjs",
+    "src/b.test-d.ts",
+    "b.spec.tsx",
+    "dist/x.js",
+    "x/dist/y/z.js",
+    "main.ts",
+    "x.d.ts",
+    "lib/x.d.ts",
+    "src/q/r.js",
+    "src/q/r.ts",
+    "a/x.js",
+    "b/y.js",
+    "c/z.js",
+    "foo.md",
+    "bar.md",
+    "foo/bar/baz",
+    ".env",
+    "x/.hidden",
+    "a.txt",
+    "d.txt",
+    "a/b/d",
+    "a/c/d",
+    "a/e/d",
+    "pkg/__tests__/t.js",
+    "api/test/health.test.ts",
+    "src/x.mjs",
+    "src/x.js",
+    "src/x.cjs",
+    "coverage/lcov.info",
+    ".git/HEAD",
+    "a/x/y/b/c.json",
+    "a/b/c.json",
+    "q.js",
+    "qq.js",
+    "a*b",
+    "axb",
+    "a/b/c.js"
+   ]
+  },
+  {
+   "p": "src/*.?(m)js",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:src\\/(?!\\.)(?=.)[^/]*?\\.(?:m)?js)$",
+   "scan": {
+    "prefix": "",
+    "input": "src/*.?(m)js",
+    "start": 0,
+    "base": "src",
+    "glob": "*.?(m)js",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.spec.mjs",
+    "src/x.mjs",
+    "src/x.js"
+   ]
+  },
+  {
+   "p": "**/{coverage,.git}/**",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:(?:^|\\/|(?:(?:(?!(?:^|\\/)\\.).)*?)\\/)(coverage|\\.git)(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$",
+   "scan": {
+    "prefix": "",
+    "input": "**/{coverage,.git}/**",
+    "start": 0,
+    "base": "",
+    "glob": "**/{coverage,.git}/**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "coverage/lcov.info",
+    ".git/HEAD"
+   ]
+  },
+  {
+   "p": "a/**/b/*.json",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:a(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)b\\/(?!\\.)(?=.)[^/]*?\\.json)$",
+   "scan": {
+    "prefix": "",
+    "input": "a/**/b/*.json",
+    "start": 0,
+    "base": "a",
+    "glob": "**/b/*.json",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a/x/y/b/c.json",
+    "a/b/c.json"
+   ]
+  },
+  {
+   "p": "?.js",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:^(?:[^.\\/]\\.js)$)$",
+   "scan": {
+    "prefix": "",
+    "input": "?.js",
+    "start": 0,
+    "base": "",
+    "glob": "?.js",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "q.js"
+   ]
+  },
+  {
+   "p": "**",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "**",
+    "start": 0,
+    "base": "",
+    "glob": "**",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "src/a.test.ts",
+    "src/a.spec.mjs",
+    "src/a.test.cjs",
+    "src/b.test-d.ts",
+    "b.spec.tsx",
+    "node_modules/x/index.js",
+    "a/node_modules/b.js",
+    "dist/x.js",
+    "x/dist/y/z.js",
+    "main.ts",
+    "x.d.ts",
+    "lib/x.d.ts",
+    "src/q/r.js",
+    "src/q/r.ts",
+    "a/x.js",
+    "b/y.js",
+    "c/z.js",
+    "foo.md",
+    "bar.md",
+    "foo/bar/baz",
+    "a.txt",
+    "d.txt",
+    "a/b/d",
+    "a/c/d",
+    "a/e/d",
+    "pkg/__tests__/t.js",
+    "api/test/health.test.ts",
+    "src/x.mjs",
+    "src/x.js",
+    "src/x.cjs",
+    "coverage/lcov.info",
+    "a/x/y/b/c.json",
+    "a/b/c.json",
+    "q.js",
+    "qq.js",
+    "a*b",
+    "axb",
+    "a/b/c.js"
+   ]
+  },
+  {
+   "p": "*",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:(?!\\.)(?=.)[^/]*?\\/?)$",
+   "scan": {
+    "prefix": "",
+    "input": "*",
+    "start": 0,
+    "base": "",
+    "glob": "*",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": true,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "b.spec.tsx",
+    "main.ts",
+    "x.d.ts",
+    "foo.md",
+    "bar.md",
+    "a.txt",
+    "d.txt",
+    "q.js",
+    "qq.js",
+    "a*b",
+    "axb"
+   ]
+  },
+  {
+   "p": "a\\*b",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:^(?:a\\*b)$)$",
+   "scan": {
+    "prefix": "",
+    "input": "a\\*b",
+    "start": 0,
+    "base": "a\\*b",
+    "glob": "",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": false,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a*b"
+   ]
+  },
+  {
+   "p": "a/b/c.js",
+   "o": {
+    "windows": false,
+    "posix": true
+   },
+   "re": "^(?:a\\/b\\/c\\.js)$",
+   "scan": {
+    "prefix": "",
+    "input": "a/b/c.js",
+    "start": 0,
+    "base": "a/b/c.js",
+    "glob": "",
+    "isBrace": false,
+    "isBracket": false,
+    "isGlob": false,
+    "isExtglob": false,
+    "isGlobstar": false,
+    "negated": false,
+    "negatedExtglob": false
+   },
+   "hits": [
+    "a/b/c.js"
+   ]
+  }
+ ]
+}

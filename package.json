@@ -1,0 +1,20 @@
+{
+  "name": "picomatch-extglob-guard",
+  "version": "4.0.7+guard.1",
+  "description": "picomatch 4.0.7 with repeated extglobs, +(...) and *(...), refused with a TypeError. A derivative of picomatch (MIT).",
+  "license": "(Apache-2.0 AND MIT)",
+  "author": "Adam Scheurer",
+  "repository": "github:unlicensedthought/picomatch-extglob-guard",
+  "main": "index.js",
+  "files": ["index.js", "posix.js", "lib", "scripts", "LICENSE", "LICENSE-picomatch", "NOTICE"],
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "test": "node --test test/*.test.cjs",
+    "upstream-check": "node scripts/upstream-check.mjs"
+  },
+  "upstream": {
+    "package": "picomatch",
+    "version": "4.0.7",
+    "advisory": "GHSA-fc5q-39xc-vjpf"
+  }
+}

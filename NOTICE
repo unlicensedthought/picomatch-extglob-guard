@@ -1,0 +1,6 @@
+picomatch-extglob-guard
+Copyright 2026 Adam Scheurer. Licensed under the Apache License 2.0 (LICENSE).
+
+This package is a derivative of picomatch 4.0.7, Copyright (c) 2017-present, Jon Schlinkert,
+distributed under the MIT License (LICENSE-picomatch). The files index.js, posix.js and lib/*.js
+are picomatch's files. The only modification is one block added to lib/parse.js (extglobOpen).
